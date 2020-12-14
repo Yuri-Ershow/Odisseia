@@ -1,0 +1,96 @@
+html,
+body,
+h1,
+.col1,
+.col2 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Gill Sans", Trebuchet, Calibri, sans-serif;
+  color: #fff;
+  background: url("../img/bgbody.jpg") no-repeat center;
+  background-size: cover;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../img/bgheader.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.logo_small {
+  display: none;
+}
+
+.wrapp_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  height: 100%;
+}
+
+.rtext {
+  margin-left: 55%;
+  margin-top: 3%;
+  font-size: 1.2em;
+  font-family: Arial;
+}
+
+.rtext_small {
+  display: none;
+}
+
+.adapt_menu_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 5%;
+  font-size: 1.3em;
+}
+
+.adapt_menu {
+  padding: 5px 25px 5px 25px;
+  border: 2px solid #CD9467;
+  background-color: #3A3426;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #fff;
+}
+
+a:visited {
+  color: #CD9467;
+}
+
+a:hover {
+  color: #ef7d55;
+}
+
+a:active {
+  color: #154088;
+}
+/*# sourceMappingURL=style.css.map */
