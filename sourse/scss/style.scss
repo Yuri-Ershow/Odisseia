@@ -1,0 +1,424 @@
+@import 'mixin_burger';
+@import 'mixin_menu';
+//------------------
+$display_menu_flex: flex;
+$width_menu_main: 90%;
+$margin_menu_main: 0% 0% 0% 8%;
+//-------------------
+$menu_li_color: #3A3426;
+$menu_border: 2px solid #CD9467;
+//-----
+$burg_bg_color_passive: #3A3426;
+$burg_lines_color: #fff;
+$burg_lines_color_active: red;
+$shadow1: 5px 5px 9px rgba(0, 0, 0, .75);
+$padding_menu_main: 8px 8px 8px 8px;
+$margin_bottom_menu_li: -5px;
+//--------------------
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+//----------------------
+.page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: "Gill Sans", Trebuchet, Calibri, sans-serif;
+    color: #fff;
+    background: url("../img/bgbody.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.header {
+    //  position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background: url("../img/bgheader180.jpg") no-repeat center top;
+    background-size: cover;
+    //   border: 2px solid #CD9467;
+    border-bottom: 2px solid #fff;
+}
+
+.logo {
+    width: 20%;
+    max-width: 219px;
+    height: auto;
+}
+
+.logo1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid #CD9467;
+    border-radius: 8%;
+}
+
+.logo_phone {
+    display: none;
+}
+
+.wrapper_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 79%;
+    font-family: Arial;
+}
+
+.container_right {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rtext {
+    margin-left: 60%;
+    margin-top: 3.5%;
+    padding-right: 1%;
+    font-size: 1.1em;
+}
+
+#menu_main {
+    display: block;
+    width: $width_menu_main;
+    margin: $margin_menu_main;
+    font-size: 1em;
+    @include myMenu(flex,
+    $menu_li_color,
+    $menu_border,
+    $padding_menu_main,
+    $margin_bottom_menu_li);
+}
+
+//------Content------------
+.content h1 {
+    text-align: center;
+    margin: 1%;
+}
+
+.content1,
+.content2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content2 {
+    margin-top: 1%;
+}
+
+.col1,
+.col2 {
+    width: 44%;
+    height: 30%;
+    font-size: 1.4em;
+    padding: 20px;
+    text-align: center;
+    background-color: $menu_li_color;
+    border: 3px solid #CD9467;
+    border-radius: 3%;
+    box-shadow: $shadow1;
+}
+
+.img1,
+.img2 {
+    width: 44%;
+    max-width: 440px;
+    height: auto;
+    border: 3px solid #CD9467;
+    border-radius: 3%;
+    box-shadow: $shadow1;
+}
+
+.img5 {
+    width: 44%;
+    max-width: 650px;
+    height: auto;
+    margin-bottom: 1.7%;
+    border: 3px solid #CD9467;
+    border-radius: 3%;
+    box-shadow: $shadow1;
+}
+
+//-----------------
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10.0vh;
+ //   margin-top: 1%;
+    background: url("../img/bgfooter100.png") no-repeat center;
+    background-size: cover;
+    border-top: 2px solid #fff;
+    // background-color: aquamarine;
+}
+
+.rfooter {
+    font-size: 2.3em;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.cfooter {
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.lfooter {
+    font-size: 1.0em;
+    text-align: center;
+    margin-left: 30px;
+    color: #fff;
+}
+
+//-----------------------
+@media only screen and (min-width: 825px) and (max-width: 1368px) {
+    .wrapper_right {
+        width: 90%;
+    }
+    #menu_main {
+        width: 90%;
+    }
+    
+    .logo1 {
+        max-width: 140px;
+        height: auto;
+        //  object-fit: cover;
+        //   border: 4px solid #CD9467;
+        //   border-radius: 8%;
+    }
+    .rtext {
+        margin-left: 10%;
+        margin-top: 2.0%;
+        padding-right: 1%;
+        font-size: 0.9em;
+        //  text-align: center;
+    }
+    .content h1 {
+        //   text-align: center;
+        margin-top: 0.7%;
+        margin-bottom: 0%;
+        font-size: 1.8em;
+    }
+    .col1,
+    .col2 {
+        //   width: 44%;
+        height: 15%;
+        font-size: 1.3em;
+        padding: 15px;
+        text-align: center;
+        background-color: $menu_li_color;
+        border: 3px solid #CD9467;
+        border-radius: 3%;
+        box-shadow: $shadow1;
+    }
+    .img1,
+    .img2 {
+        //  width: 44%;
+        max-width: 350px;
+        height: auto;
+        //  border: 3px solid #CD9467;
+        //  border-radius: 3%;
+        //  box-shadow: $shadow1;
+    }
+    .img2 {
+        margin-bottom: 1%;
+    }
+    .footer {
+        height: 9.0vh;
+    }
+    .rfooter {
+        font-size: 2.1em;
+        //  text-align: center;
+        margin-right: 30px;
+    }
+    .cfooter {
+        font-size: 2.1em;
+        // text-align: center;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 824px) {
+    .logo1 {
+        max-width: 120px;
+        height: auto;
+    }
+    .rtext {
+        margin-left: 3%;
+        margin-right: 15%;
+        margin-top: 7%;
+        padding-right: 1%;
+        font-size: 0.9em;
+    }
+    #menu_main {
+        display: block;
+        @include myMenu(none,
+        $menu_li_color,
+        $menu_border,
+        $padding_menu_main,
+        $margin_bottom_menu_li);
+    }
+    .wrapper_burger {
+        display: block;
+        position: fixed;
+        top: 3%;
+        right: 4%;
+        @include myBurger($burg_bg_color_passive,
+        $burg_lines_color,
+        $burg_lines_color_active);
+    }
+    .content h1 {
+      //  margin-top: 0.7%;
+      //  margin-bottom: 0%;
+        font-size: 1.7em;
+    }
+    .content1,
+    .content2 {
+        //  display: flex;
+        //  justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .col1,
+    .col2 {
+        width: 97%;
+        text-align: center;
+        margin: 2%;
+        font-size: 1.2em;
+    }
+    .img1,
+    .img2 {
+        width: 97%;
+        max-width: 670px;
+        text-align: center;
+        margin: 2%;
+    }
+    .col2 {
+        order: 1;
+        margin-top: 0%;
+    }
+    .img2 {
+        order: 2;
+    }
+    .img5 {
+        width: 97%;
+    }
+    .lfooter {
+        font-size: 0.8em;
+        margin-left: 15px;
+      //  margin-top: 1%;
+    }
+    .rfooter {
+        font-size: 1.7em;
+        //  text-align: center;
+        margin-right: 15px;
+      //  margin-top: 1%;
+    }
+    .cfooter {
+        font-size: 1.7em;
+        // text-align: center;
+      //  margin-top: 1%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .header {
+        //  position: fixed;
+     //   display: flex;
+      //  justify-content: space-between;
+        background: url("../img/bgheader80_phone.jpg") repeat-x center top;
+     //   background-size: cover;
+        //   border: 2px solid #CD9467;
+        border-bottom: 2px solid #fff;
+    }
+
+    .logo1 {
+        display: none;
+    }
+    .logo_phone {
+        display: block;
+        border: 2px solid #CD9467;
+    }
+
+    .rtext {
+        margin-left: 3%;
+        margin-right: 15%;
+        margin-top: 7%;
+        padding-right: 1%;
+        font-size: 0.7em;
+    }
+    #menu_main {
+        display: block;
+        @include myMenu(none,
+        $menu_li_color,
+        $menu_border,
+        $padding_menu_main,
+        $margin_bottom_menu_li);
+    }
+    .wrapper_burger {
+        display: block;
+        position: fixed;
+        top: 2%;
+        right: 2%;
+        @include myBurger($burg_bg_color_passive,
+        $burg_lines_color,
+        $burg_lines_color_active);
+    }
+    .content h1 {
+        //  margin-top: 0.7%;
+        //  margin-bottom: 0%;
+          font-size: 1.6em;
+      }
+      .content1,
+      .content2 {
+          //  display: flex;
+          //  justify-content: space-around;
+          align-items: center;
+          flex-wrap: wrap;
+      }
+      .col1,
+      .col2 {
+          width: 97%;
+          text-align: center;
+          margin: 2%;
+          font-size: 1.2em;
+      }
+      .img1,
+      .img2 {
+          width: 97%;
+          max-width: 670px;
+          text-align: center;
+          margin: 2%;
+      }
+      .col2 {
+          order: 1;
+          margin-top: 0%;
+      }
+      .img2 {
+          order: 2;
+      }
+      .img5 {
+        width: 97%;
+    }
+    .lfooter {
+        font-size: 0.8em;
+        margin-left: 7px;
+    }
+    .rfooter {
+        font-size: 1.3em;
+        //  text-align: center;
+        margin-right: 5px;
+    }
+    .cfooter {
+        font-size: 1.3em;
+        // text-align: center;
+    }
+    
+}

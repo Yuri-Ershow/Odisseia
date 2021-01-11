@@ -1,0 +1,47 @@
+// $var_padding: 8px 12px 8px 12px;
+// $var_margin_bottom: -5px;
+@mixin myMenu($display_vid, $menu_li_color1, $menu_border1, $var_padding, $var_margin_bottom) {
+    $shadow1: 5px 5px 9px rgba(0, 0, 0, .75);
+    #menu {
+        display: $display_vid;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #menu li {
+        list-style: none;
+        color: #fff;
+        padding: $var_padding;
+        text-align: center;
+      //  margin-right: 15px;
+        margin-bottom: $var_margin_bottom;
+        background-color: $menu_li_color1;
+        border: $menu_border1;
+        border-radius: 8%;
+        box-shadow: $shadow1;
+    }
+    //--------------
+    #menu.open {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: fixed;
+        top: 110px;
+        left: 20px;
+        width: 130px;
+        height: 290px;
+        padding-right: 40px;
+       // background-color: #c48c5e;
+        background-color: #8a6241;
+        border: $menu_border1;
+        border-radius: 8%;
+        box-shadow: $shadow1;
+        transition: linear .5s;
+    }
+    #menu a {
+        text-decoration: none;
+        color: aqua;
+    }
+    #menu a:link {
+        color: rgb(193, 219, 109);
+    }
+}

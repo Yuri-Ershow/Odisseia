@@ -1,0 +1,62 @@
+//
+
+//----------------------
+@mixin myBurger($burger_bg_color, 
+                $burger_lines_color,
+                $burger_lines_color_active) {
+    #burger {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid #CD9467;
+        border-radius: 4%;
+        margin-top: 7%;
+     //margin-top: auto;
+        margin-right: 2%;
+        background-color: $burger_bg_color;
+    }
+
+    .burger_line {
+        width: 80%;
+        height: 4px;
+        background-color: $burger_lines_color;
+        position: absolute;
+        left: 10%;
+        transition: .5s all linear;
+    }
+
+    .burger_line_first {
+        top: 14%;
+    }
+
+    .burger_line_second,
+    .burger_line_third {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .burger_line_fourth {
+        bottom: 14%;
+    }
+
+//------
+    .burger_active .burger {
+       background-color: greenyellow;
+    }
+
+    .burger_active .burger_line_first,
+    .burger_active .burger_line_fourth {
+        opacity: 0;
+    }
+    .burger_active .burger_line_second {
+        transform: translateY(-50%) rotate(45deg);
+        background-color: $burger_lines_color_active;
+    }
+
+    .burger_active .burger_line_third {
+        transform: translateY(-50%) rotate(-45deg);
+        background-color: $burger_lines_color_active;
+    }
+}
